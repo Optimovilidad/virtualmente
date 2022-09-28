@@ -1,16 +1,13 @@
 import os
 
-os.system('pgrep python3 > /home/orange/Desktop/radio/pyt.txt')
-archivo = open('/home/orange/Desktop/radio/pyt.txt')
-linea = archivo.readlines()
-#l = linea[len(linea)-1]
-#l = linea[1]
-#print(l)
+txt_path = os.getcwd() + '/pyt.txt'
 
-#lsof +D /home/orange/Desktop/radio
+os.system('pgrep python3 > '+txt_path)
+archivo = open(txt_path)
+linea = archivo.readlines()
 
 if(len(linea) > 1):
-	for i in range(0,len(linea)-1):
-		os.system('kill -9 '+linea[i])
-
-os.system('python3 /home/orange/Desktop/radio/testR.py')
+    for i in range(0, len(linea)-1):
+        os.system('kill -9 '+linea[i])
+radio_path = os.getcwd() + '/testR.py'
+os.system('python3 '+radio_path)
