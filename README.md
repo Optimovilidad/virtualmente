@@ -1,2 +1,2 @@
 # virtualmente
-Aplicaci[on de la radio Virtual-mente
+Aplicacion de la radio Virtual-mente
