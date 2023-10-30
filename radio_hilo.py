@@ -54,8 +54,8 @@ class Radio():
             url = r.get('https://virtual-mente.net/radio/').text
             if self.check_url(url):
                 return url
-            return "rtmp://186.4.158.16/livestream/stream"
-            #return "http://186.4.158.16:8080/livestream/stream.m3u8"
+            #return "rtmp://186.4.158.16/livestream/stream"
+            return "http://186.4.224.169:8080/livestream/stream.m3u8"
         except Exception as e:
             print(e)
             return None
@@ -111,3 +111,4 @@ class Radio():
 
 
 Radio(True)
+
