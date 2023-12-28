@@ -51,11 +51,11 @@ class Radio():
 
     def __get_link(self):
         try:
-            url = r.get('https://virtual-mente.net/radio/').text
+            url = r.get('http://virtual-mente.net/radio/').text
             if self.check_url(url):
                 return url
-            #return "rtmp://186.4.158.16/livestream/stream"
-            return "http://186.4.224.169:8080/livestream/stream.m3u8"
+            return "rtmp://186.4.224.169/livestream/stream"
+            #return "http://186.4.224.169:8080/livestream/stream.m3u8"
         except Exception as e:
             print(e)
             return None
@@ -107,8 +107,7 @@ class Radio():
                     pass
                 self.mensaje += ";"+"detenido"
             # print(self.mensaje)
-            sleep(10)
+            sleep(5)
 
 
 Radio(True)
-
